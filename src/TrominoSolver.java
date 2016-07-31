@@ -19,7 +19,7 @@ public class TrominoSolver {
     final int height = 500;
 
     final int top = 30;
-    final int left = 20;
+    final int left = 100;
 
     private int emptyCol;
     private int emptyRow;
@@ -76,7 +76,7 @@ public class TrominoSolver {
 
         text.add("Displaying grid: " + cols + " x " + rows + "\nMissing tile at: " + emptyCol + ", " + emptyRow);
 
-        tile(cols, emptyCol, emptyRow, 0, 0);
+        tile(cols, emptyCol, emptyRow, cols / 2, cols / 2);
 
         //UI.clearGraphics();
     }
@@ -184,7 +184,7 @@ public class TrominoSolver {
 
             return;
 
-        } else if(n>2){
+        } else if (n > 2) {
 
             int x = lX;
             int y = lY;
@@ -217,25 +217,25 @@ public class TrominoSolver {
             board.drawBoard();
 
             if (sType == "LL") {
-                tile(n / 2, mX, mY, lX+n/2, lY+n/2);
-                tile(n / 2, newEmptys[0], newEmptys[1], lX-n/2, lY+n/2);
-                tile(n / 2, newEmptys[2], newEmptys[3], lX+n/2, lY-n/2);
-                tile(n / 2, newEmptys[4], newEmptys[5], lX-n/2, lY-n/2);
-            } else if(sType == "LR"){
-                tile(n / 2, mX, mY, lX-n/2, lY+n/2);
-                tile(n / 2, newEmptys[0], newEmptys[1], lX+n/2, lY+n/2);
-                tile(n / 2, newEmptys[2], newEmptys[3], lX+n/2, lY-n/2);
-                tile(n / 2, newEmptys[4], newEmptys[5], lX-n/2, lY-n/2);
-            } else if(sType == "UL"){
-                tile(n / 2, mX, mY, lX+n/2, lY-n/2);
-                tile(n / 2, newEmptys[0], newEmptys[1], lX-n/2, lY+n/2);
-                tile(n / 2, newEmptys[2], newEmptys[3], lX+n/2, lY-n/2);
-                tile(n / 2, newEmptys[4], newEmptys[5], lX-n/2, lY-n/2);
-            } else if(sType == "UR"){
-                tile(n / 2, mX, mY, lX-n/2, lY-n/2);
-                tile(n / 2, newEmptys[0], newEmptys[1], lX-n/2, lY+n/2);
-                tile(n / 2, newEmptys[2], newEmptys[3], lX+n/2, lY+n/2);
-                tile(n / 2, newEmptys[4], newEmptys[5], lX+n/2, lY-n/2);
+                tile(n / 2, mX, mY, lX + n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[0], newEmptys[1], lX - n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[2], newEmptys[3], lX + n / 4, lY - n / 4);
+                tile(n / 2, newEmptys[4], newEmptys[5], lX - n / 4, lY - n / 4);
+            } else if (sType == "LR") {
+                tile(n / 2, mX, mY, lX - n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[0], newEmptys[1], lX + n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[2], newEmptys[3], lX + n / 4, lY - n / 4);
+                tile(n / 2, newEmptys[4], newEmptys[5], lX - n / 4, lY - n / 4);
+            } else if (sType == "UL") {
+                tile(n / 2, mX, mY, lX + n / 4, lY - n / 4);
+                tile(n / 2, newEmptys[0], newEmptys[1], lX - n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[2], newEmptys[3], lX + n / 4, lY - n / 4);
+                tile(n / 2, newEmptys[4], newEmptys[5], lX - n / 4, lY - n / 4);
+            } else if (sType == "UR") {
+                tile(n / 2, mX, mY, lX - n / 4, lY - n / 4);
+                tile(n / 2, newEmptys[0], newEmptys[1], lX - n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[2], newEmptys[3], lX + n / 4, lY + n / 4);
+                tile(n / 2, newEmptys[4], newEmptys[5], lX + n / 4, lY - n / 4);
             }
         }
     }
