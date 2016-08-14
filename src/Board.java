@@ -82,8 +82,13 @@ public class Board {
         fillTile(emptyCol, emptyRow, Color.blue);
 
         for (int i = 0; i <= index && i < trominos.size(); i++) {
-            trominos.get(i).draw();
+            Color c = Color.red;
+            if (i == index) {
+                c = Color.blue;
+            }
+            trominos.get(i).draw(c);
         }
+
 
     }
 

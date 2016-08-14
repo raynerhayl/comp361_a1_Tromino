@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="comp361_a1_Tromino:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/comp361_a1_Tromino_jar</output-path>
+    <root id="archive" name="comp361_a1_Tromino.jar">
+      <element id="module-output" name="comp361_a1_Tromino" />
+      <element id="extracted-dir" path="C:/Program Files/Java/ecs100.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

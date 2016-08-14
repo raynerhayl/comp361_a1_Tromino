@@ -71,10 +71,10 @@ public class Tromino
 
     }
 
-    public void draw(){
+    public void draw(Color color){
         List<Line> lines = new ArrayList<Line>();
 
-        Color c = Color.red;
+        Color c = color;
 
         UI.setLineWidth(3);
 
