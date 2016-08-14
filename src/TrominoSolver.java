@@ -190,7 +190,7 @@ public class TrominoSolver {
                 sType = "UR";
             }
 
-            text.add(x + " " + y + " " + sType + " : " + text1+" base ");
+            text.add(x + " " + y + " " + sType + " : " + text1);
             textIndex = textIndex + 1;
             displayText();
             board.addTromino(new Tromino(x, y, type, board));
@@ -220,7 +220,7 @@ public class TrominoSolver {
                 sType = "UL";
             }
 
-            text.add(x + " " + y + " " + sType +" missing: "+mX+" "+mY+" l: "+lX+" "+lY);
+            text.add(x + " " + y + " " + sType +" missing: "+mX+" "+mY);
             textIndex = textIndex + 1;
             displayText();
 
